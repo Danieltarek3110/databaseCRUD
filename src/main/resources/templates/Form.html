@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+
+<body>
+    <h1>Insert Data</h1>
+    <form action="/submit" method="post">
+        <label for="dataid">Data ID (Integer):</label>
+        <input type="integer" id="dataId" name="dataid" required><br><br>
+
+        <label for="ownerid">Owner ID (Integer):</label>
+        <input type="integer" id="ownerId" name="ownerid" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="String" id="name" name="name" required><br><br>
+
+        <label for="parentid">Parent ID:</label>
+        <input type="integer" id="parentId" name="parentid"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+	
+</body>
+
+</html>
