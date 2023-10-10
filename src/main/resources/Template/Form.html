@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+
+<body>
+    <h1>Insert Data</h1>
+    <form action="/api/v1/DBconn/submit" method="post">
+        <label for="dataId">Data ID (Integer):</label>
+        <input type="number" id="dataId" name="dataId" required><br><br>
+
+        <label for="ownerId">Owner ID (Integer):</label>
+        <input type="number" id="ownerId" name="ownerId" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="parentId">Parent ID:</label>
+        <input type="number" id="parentId" name="parentId"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+	
+</body>
+
+</html>

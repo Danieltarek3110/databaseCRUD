@@ -5,14 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "DTreeCore")
+@Table(name = "TestDBconn")
 public class DBEntity {
 
+    @jakarta.persistence.Id
     @Column(name = "DataID")
-    private long DataId;
+    private int DataId;
 
     @Column(name = "OwnerID")
-    private String OwnerID;
+    private int OwnerID;
     
     @Column(name = "Name")
     private String Name;
@@ -23,19 +24,19 @@ public class DBEntity {
     @Column(name = "Deleted")
     private boolean Deleted;
 
-    public long getDataId() {
+    public int getDataId() {
         return DataId;
     }
 
-    public void setDataId(long dataId) {
+    public void setDataId(int dataId) {
         DataId = dataId;
     }
 
-    public String getOwnerID() {
+    public int getOwnerID() {
         return OwnerID;
     }
 
-    public void setOwnerID(String ownerID) {
+    public void setOwnerID(int ownerID) {
         OwnerID = ownerID;
     }
 
@@ -63,7 +64,7 @@ public class DBEntity {
         Deleted = deleted;
     }
 
-    public DBEntity(long dataId, String ownerID, String name, int parentID, boolean deleted) {
+    public DBEntity(int dataId, int ownerID, String name, int parentID, boolean deleted) {
         DataId = dataId;
         OwnerID = ownerID;
         Name = name;

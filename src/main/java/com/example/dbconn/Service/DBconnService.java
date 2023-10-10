@@ -1,9 +1,7 @@
 package com.example.dbconn.Service;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
 import com.example.dbconn.Repository.DBRepo;
 
 @Service
@@ -15,12 +13,14 @@ public class DBconnService {
     @Autowired
     private DBRepo dbRepo;
 
-    public String CreateTuple(Long dataid , Long ownerid , String name , int parentid , Boolean deleted ){
+    public String CreateTuple(int dataid , int ownerid , String name , int parentid , Boolean deleted ){
         try{
-            dbRepo.Create(dataid, ownerid, name, ownerid, deleted);
+            /*  dbRepo.save(new DBEntity(dataid, ownerid, name, parentid, false));  */
+            
+            dbRepo.Create(dataid, ownerid, name, parentid, deleted);
         }
         catch(Exception e){ 
-            return e.getMessage();
+            return e.getMessage().toString();
         }
         return  " #### " + "Sucessfully added" + name ;
     }
