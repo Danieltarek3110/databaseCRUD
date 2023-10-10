@@ -23,9 +23,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-
-
-
 		<!-- START Importing Database dependency -->
 
 		<dependency>
@@ -34,7 +31,6 @@
         </dependency>
 
  
-
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
@@ -49,8 +45,6 @@
 
 
 		<!-- END Importing Database dependency -->
-
-
 
 
 
