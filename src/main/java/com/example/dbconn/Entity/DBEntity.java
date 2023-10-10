@@ -8,8 +8,8 @@ import jakarta.persistence.Table;
 @Table(name = "DTreeCore")
 public class DBEntity {
 
-    @Column(name = "OwnerID")
-    private long OwnerId;
+    @Column(name = "DataID")
+    private long DataId;
 
     @Column(name = "OwnerID")
     private String OwnerID;
@@ -23,12 +23,12 @@ public class DBEntity {
     @Column(name = "Deleted")
     private boolean Deleted;
 
-    public long getOwnerId() {
-        return OwnerId;
+    public long getDataId() {
+        return DataId;
     }
 
-    public void setOwnerId(long ownerId) {
-        OwnerId = ownerId;
+    public void setDataId(long dataId) {
+        DataId = dataId;
     }
 
     public String getOwnerID() {
@@ -63,9 +63,9 @@ public class DBEntity {
         Deleted = deleted;
     }
 
-    public DBEntity(long ownerId, String ownerID2, String name, int parentID, boolean deleted) {
-        OwnerId = ownerId;
-        OwnerID = ownerID2;
+    public DBEntity(long dataId, String ownerID, String name, int parentID, boolean deleted) {
+        DataId = dataId;
+        OwnerID = ownerID;
         Name = name;
         ParentID = parentID;
         Deleted = deleted;
@@ -73,7 +73,6 @@ public class DBEntity {
 
     public DBEntity() {
     }
-
 
     
 }
